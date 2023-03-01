@@ -10,8 +10,9 @@
         <ul class="list-group">
         <% todos.forEach(todo => { %>
             <div class="d-flex p-1 flex-row">
+                <a class="btn btn-outline-light" href="/todo/edit/<%= todo._id %>">EDIT</a>
                 <li class="list-group-item rounded" style="width: 2000px; "><%= todo.todo %></li>
-                <a class="btn btn-outline-light" href="/todo/<%= todo._id %>" id="<%= todo._id %>">REMOVE</a>
+                <a class="btn btn-outline-light" href="/todo/done/<%= todo._id %>">DONE</a>
             </div>
         <% }) %>
           </ul>

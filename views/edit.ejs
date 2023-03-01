@@ -1,0 +1,12 @@
+<%- include('./partials/header') %>
+<div class="container mt-5">
+    <form action="/todo/edit/<%= doc._id %>" method="POST">
+        <div class="input-group">
+            <a class="btn btn-outline-light" href="/">CANCEL</a>
+            <input type="text" id="todo" name="todo" class="form-control" placeholder="Update To Do" value="<%= doc.todo %>">
+            <button class="btn btn-outline-light" type="submit" id="submit">UPDATE</button>
+        </div>
+    </form>
+</div>
+
+<%- include('./partials/footer') %>
